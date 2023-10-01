@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Reserva de Vaga</title>
+    <link rel="stylesheet" href="estilização.css">
+</head>
+<body class="corpo">
+    <div class="container">
+    <h1>Cadastro das vagas</h1>
+
+    <div class="input-group">
+        <div class="input-group">
+            <div class="input-box"></div>
+            <label for="placa-veiculo">Placa do Veículo</label>
+            <input id="placa-veiculo" type="text" name="placa-veiculo" placeholder="Número da Placa" required>
+        </div>
+        
+        <div class="input-group">
+            <div class="input-box"></div>
+            <label for="numero-apartamento">Número do Apartamento</label>
+            <input id="numero-apartamento" type="number" name="numero-apartamento" placeholder="Número do Apartamento" required>
+        </div>
+        
+        <div class="input-group">
+            <div class="input-box"></div>
+            <label for="bloco-apartamento">Bloco do Apartamento</label>
+            <input id="bloco-apartamento" type="text" name="bloco-apartamento" placeholder="Bloco do Apartamento" required>
+        </div>
+        
+        <div class="input-group">
+            <div class="input-box"></div>
+            <label for="modelo-veiculo">Modelo do Veículo</label>
+            <input id="modelo-veiculo" type="text" name="modelo-veiculo" placeholder="Modelo do Veículo" required>
+        </div>
+        
+        <div class="input-group">
+            <div class="input-box"></div>
+            <label for="cor-veiculo">Cor do Veículo</label>
+            <input id="cor-veiculo" type="text" name="cor-veiculo" placeholder="Cor do Veículo" required>
+        </div>
+        
+        <div class="input-group">
+            <div class="input-box"></div>
+            <label for="numero-vaga">Número da Vaga de Estacionamento</label>
+            <input id="numero-vaga" type="number" name="numero-vaga" placeholder="Número da Vaga de Estacionamento" required>
+    
+            <div class="input-button">
+            <form id="cadastroForm" onsubmit="enviarCadastro(); return false;">
+                <!-- ... Seus campos do formulário ... -->
+                <button type="submit">Enviar</button>
+            </form>
+            
+         
+    </div>
+        
+</body>
+</html>

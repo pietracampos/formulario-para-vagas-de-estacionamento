@@ -1,0 +1,18 @@
+/* Estilos para o corpo (body) da página */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(246, 253, 144, 0.808); /* Cor de fundo amarela */
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(12, 1, 1); /* Cor do texto dentro do corpo */
+}
+
+/* Estilos para a tabela */
+/* Estilos para a tabela */
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black; /* Cor do texto dentro da tabela */
+    border-color: black;
+    background-color: rgb(252, 252, 252); /* Cor de fundo da tabela */
+}
+

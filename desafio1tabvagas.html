@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilizaçãovagas.css">
+    <title>Cadastro de Reserva de Vaga</title>
+    <style>
+        table.horizontal-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table.horizontal-table th,
+        table.horizontal-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table.horizontal-table th {
+            background-color: #f2f2f2;
+        }
+
+        table.horizontal-table td {
+            width: 50%; /* Cada célula ocupará metade da largura da tabela */
+        }
+
+        table.horizontal-table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastro de Reserva de Vaga</h1>
+
+    <h2>Vagas</h2>
+    <table class="horizontal-table">
+        <thead>
+            <tr>
+                <th>Número da Vaga</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-vagas">
+
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabelaVagas = document.getElementById("tabela-vagas");
+            const totalVagas = 50;
+
+            for (let i = 1; i <= totalVagas; i++) {
+                const newRow = tabelaVagas.insertRow();
+                const cell1 = newRow.insertCell(0);
+                const cell2 = newRow.insertCell(1);
+
+                cell1.innerHTML = i;
+                cell2.innerHTML = "Disponível";
+            }
+        });
+
+        const form = document.getElementById("cadastroForm");
+
+        form.addEventListener("submit", function (event) {
+            let isValid = true;
+
+            // Validação do campo Placa do Veículo
+            const placaVeiculo = document.getElementById("placa-veiculo");
+            if (!placaVeiculo.value.trim()) {
+                alert("Campo 'Placa do Veículo' é obrigatório.");
+                isValid = false;
+            }
+
+            // Validação do campo Número do Apartamento
+            const numeroApartamento = document.getElementById("numero-apartamento");
+            if (!numeroApartamento.value.trim()) {
+                alert("Campo 'Número do Apartamento' é obrigatório.");
+                isValid = false;
+            }
+
+            // Validação do campo Número da Vaga de Estacionamento
+            const numeroVaga = document.getElementById("numero-vaga");
+            if (!numeroVaga.value.trim()) {
+                alert("Campo 'Número da Vaga de Estacionamento' é obrigatório.");
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault(); // Impede o envio do formulário se a validação falhar
+            }
+        });
+// Array de vagas
+const vagas = [];
+
+// Total de vagas disponíveis
+const totalVagas = 50;
+
+// Adicione as vagas disponíveis (todas no início)
+for (let i = 1; i <= totalVagas; i++) {
+    vagas.push("Disponível");
+    or
+    vagas.push("Indisponivel");
+
+
+}
+
+// Agora, o array 'vagas' contém informações sobre a disponibilidade de cada vaga.
+
+    </script>
+</body>
+
+</html>
